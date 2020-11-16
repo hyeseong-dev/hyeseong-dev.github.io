@@ -7,11 +7,11 @@ type: about
 
 
 
-![내사진](../assets/images/jiyeonlee.jpeg)
+![내사진](../assets/images/devlpr.jpeg)
 
-### Jiyeon Lee (Rian Lee)
+### Hyeseong Lee (Rian Lee)
 
-꿈많고 욕심많고 하고싶은거 많은 학생 개발자~!!
+<!-- 꿈많고 욕심많고 하고싶은거 많은 학생 개발자~!!
 
 > You Live Only Once?
 
@@ -26,7 +26,7 @@ type: about
 ### 경력 사항 (?)
 
 - 2020
-    - SAP Korea Student Intern (2020.01.08 ~ current)
+    - Data Analysist  (2020.01.08 ~ current)
     - Shneider Eletric -  Go Green 2020  Domestic Final
 
 - 2019
@@ -34,12 +34,12 @@ type: about
     - Summer Internship in US (Web Development)
     - GDG Devfest on Campus - Flutter Codelab Tutor
     - Flutter Interact Extended Staff
-    - 프로그래밍 소모임 EMOTE 회장 (2019.03.01 ~ 2019.12.31)
+    - 프로그래밍 소모임 EMOTE 회장 (2019.03.01 ~ 2019.12.31) -->
 
 
 ### Social
 
-- facebook : [Jiyeon Lee](https://www.facebook.com/profile.php?id=100005354681961)
-- instagram : [@_gee_y](https://www.instagram.com/_gee_y/?hl=ko)
-- Linkedin : <https://www.linkedin.com/in/jiyeon-rian-lee>
-- Github : <https://github.com/jiyeoon>
+- twitter : [Hyeseong Lee](https://www.facebook.com/hyeseongDev)
+<!-- - instagram : [@_gee_y](https://www.instagram.com/_gee_y/?hl=ko) -->
+- Linkedin : <https://www.linkedin.com/in/hyeseong-lee>
+- Github : <https://github.com/hyeseong-dev>

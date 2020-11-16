@@ -226,16 +226,15 @@ social_icons:
   enable: true
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
-  GitHub: https://github.com/jiyeoon
-  #Twitter: twitter
+  GitHub: https://github.com/hyeseong-dev
+  Twitter: https://twitter.com/hyeseongDev
   #Weibo: weibo
-  Facebook: https://www.facebook.com/profile.php?id=100005354681961
-
+  Facebook: 
 
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-avatar: /assets/images/jiyeonlee.jpeg
+avatar: /assets/images/devlpr.jpeg
  
 
 # Table Of Contents in the Sidebar
