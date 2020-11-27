@@ -5,8 +5,10 @@ type: about
 
 # Who am I?
 
-![내사진](../assets/images/hyeseong2.jpg)
+
+<img src="../assets/images/hyeseong2.jpg" width="150px">
 # HyeSeong Lee 👨‍💻
+
 
 [![Twitter Badge](https://img.shields.io/badge/-@hyeseongDev-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/hyeseongDev)](https://twitter.com/hyeseongDev) 
 [![Linkedin Badge](https://img.shields.io/badge/-hyeseong-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/hyeseong43/)](https://www.linkedin.com/in/hyeseong43/) 
@@ -14,6 +16,7 @@ type: about
 [![Donate](https://img.shields.io/badge/Support-%24-blue)](https://www.paypal.me/hyeseong43)
 [![GitHub followers](https://img.shields.io/github/followers/hyeseong-dev?label=Follow&style=social)](https://github.com/hyeseong-dev/?tab=follow)
 [![Gmail Badge](https://img.shields.io/badge/-hyeseong43@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:hyeseong43@gmail.com)](mailto:hyeseong43@gmail.com)
+
 ---
 
 ## Hi there 👋,
