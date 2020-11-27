@@ -5,40 +5,42 @@ type: about
 
 # Who am I?
 
-
 ![내사진](../assets/images/devlpr.jpeg)
+# HyeSeong Lee 👨‍💻
 
-### Hyeseong Lee (Collins Lee)
+[![Twitter Badge](https://img.shields.io/badge/-@hyeseongDev-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/hyeseongDev)](https://twitter.com/hyeseongDev) 
+[![Linkedin Badge](https://img.shields.io/badge/-hyeseong-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/hyeseong43/)](https://www.linkedin.com/in/hyeseong43/) 
+[![Medium Badge](https://img.shields.io/badge/-@hyeseong-03a57a?style=flat-square&labelColor=000000&logo=Medium&link=https://medium.com/@hyeseong43/)](https://medium.com/@hyeseong43/)
+[![Donate](https://img.shields.io/badge/Support-%24-blue)](https://www.paypal.me/hyeseong43)
+[![GitHub followers](https://img.shields.io/github/followers/hyeseong-dev?label=Follow&style=social)](https://github.com/hyeseong-dev/?tab=follow)
+[![Gmail Badge](https://img.shields.io/badge/-hyeseong43@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:hyeseong43@gmail.com)](mailto:hyeseong43@gmail.com)
+---
 
-<!-- -- 꿈많고 욕심많고 하고싶은거 많은~!!
+## Hi there 👋,
 
-> You Live Only Once?
-
-한번밖에 없는 인생 알차게 살고싶다. 이왕 알차는거 나만 알차지 않고 내 주위 사람들, 그리고 내가 몸담고 있는 사회가 알차졌으면 좋겠다!
-
-- [ ] 남미, 아프리카 여행가기
-- [ ] 봉사하는 삶 살기
-- [ ] 누군가의 멘토가 되어주기
-- [ ] 사랑하는 가족과 친구를 위해 최선을 다하기~
-
+### I'm HyeSeong Lee, studying at 👨‍💻 Korea Institute of Science and Technology . I am a tech and management enthusiast, Would love to be a cloud evangelist and see myself as a Product / Program Learner.
+-------
   
-### 경력 사항 (?)
+## 🧐 About
 
-- 2020
-    - Data Analysist  (2020.01.08 ~ current)
-    - Shneider Eletric -  Go Green 2020  Domestic Final
+- 🏄‍ Community guy who loves being involved in communities and wants to be an awesome full stack developer in the future.
+- 😄 I usually enjoy reading some books and meditating before go to sleep. 
+- 🌱 I love to speak at public events and have been a speaker at many events. I organise Workshops, Webinars etc to help student Communitiess
+- 👯 And Many More...
 
-- 2019
-    - Google DSC(Developer Student Clubs) Korea Lead (2019.08.15 ~ current)
-    - Summer Internship in US (Web Development)
-    - GDG Devfest on Campus - Flutter Codelab Tutor
-    - Flutter Interact Extended Staff
-    - 프로그래밍 소모임 EMOTE 회장 (2019.03.01 ~ 2019.12.31) --> -->
+# <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Hi.gif" width="29px"> Hello world!&nbsp;<img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Earth.gif" width="24px">
+
+- 💬 Ask me about anything and everything!
+- 📫 How to reach me: message me at +8201058974859
+- ⚡ Fun fact: I love meeting new people and eating food!
+- 💬 Ping Me about #cloud, #RPA, #CommunityOps, #DevRel, #speaking opportunity, #Marketing #CampusOps and anything you like
 
 
-### Social
+![HyeSeong's github stats](https://github-readme-stats.vercel.app/api?username=hyeseong-dev&show_icons=true&theme=dark)
 
-- twitter : [Hyeseong Lee](https://www.facebook.com/hyeseongDev)
-<!-- - instagram : [@_gee_y](https://www.instagram.com/_gee_y/?hl=ko) -->
-<!-- - Linkedin : <https://www.linkedin.com/in/hyeseong-lee> -->
-- Github : <https://github.com/hyeseong-dev>
+<!--
+**hyeseong-dev/hyeseong-dev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+
+🤔
+
+-->
