@@ -5,7 +5,7 @@ type: about
 
 # Who am I?
 
-![내사진](../assets/images/devlpr.jpeg)
+![내사진](../assets/images/hyeseong2.jpg)
 # HyeSeong Lee 👨‍💻
 
 [![Twitter Badge](https://img.shields.io/badge/-@hyeseongDev-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/hyeseongDev)](https://twitter.com/hyeseongDev) 
