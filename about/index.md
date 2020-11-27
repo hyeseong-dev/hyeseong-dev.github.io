@@ -18,7 +18,7 @@ type: about
 
 ## Hi there 👋,
 
-### I'm HyeSeong Lee, studying at 👨‍💻 Korea Institute of Science and Technology . I am a tech and management enthusiast, Would love to be a cloud evangelist and see myself as a Product / Program Learner.
+### I'm HyeSeong Lee, studying at 👨‍💻 Korea Institute of Science and Technology Information . I am a tech and management enthusiast, Would love to be a cloud evangelist and see myself as a Product / Program Learner.
 -------
   
 ## 🧐 About
@@ -32,7 +32,7 @@ type: about
 
 - 💬 Ask me about anything and everything!
 - 📫 How to reach me: message me at +8201058974859
-- ⚡ Fun fact: I love meeting new people and eating food!
+- ⚡ Fun fact: I love meeting new people, eating food, jogging along the river.
 - 💬 Ping Me about #cloud, #RPA, #CommunityOps, #DevRel, #speaking opportunity, #Marketing #CampusOps and anything you like
 
 
