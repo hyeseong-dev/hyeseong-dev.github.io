@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "[docker] Differences of Docker Images"
-date: 2020-11-19 22:00
+date: 2021-10-05 10:00
 category: docker
 tags: [docker,container]
-image: 'images/posts/linux.png'
 ---
 # stretch/buster/jessie
 

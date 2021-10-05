@@ -233,6 +233,23 @@ networks:
 
 ### Dockerfile, entripoint, start 파일
 
+- FROM 키워드에서 언어:3.9-`slim-buster`란 무엇일까요?
+  - slim-buster라고 붙은 건 각 이미지의 여러 종류(Operating System)중 하나를 의미 
+  - 참고 https://hyeseong-dev.github.io/docker/2020/11/19/images-concept/
+
+- ENV PYTHONUNBUFFERED 1
+  - 컴포즈에서 파이썬 로그가 한 발 늦게 출력됨을 방지
+  - 버퍼가 기본으로 작동하면서 출력 로그를 붙잡고 있기 때문. 이를 해결하기 위해 환경변수를 추가
+
+- PYTHONDONTWRITEBYTECODE 1
+  - .pyc 파일을 생성하지 않도록함(도커 이용시에는 필요없기 때문)
+
+- build-essential : 컴파일시 필요한 패키지들을 다운로드함
+- libpq-dev : libpq 는 PostgreSQL에 대한 C 애플리케이션 프로그래머의 인터페이스 입니다. libpq 는 클라이언트 프로그램이 PostgreSQL 백엔드 서버에 쿼리를 전달 하고 이러한 쿼리 결과를 수신 할 수 있도록 하는 라이브러리 함수 세트입니다.
+- gettext : gettext는 유닉스 계열 컴퓨터 운영 체제의 다국어 프로그램을 작성할 목적으로 흔히 쓰이는 국제화와 지역화(i18n, L10n) 시스템이다.
+- `apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false` : 우분투 apt 추천 패키지 자동설치 해제
+- sed : sed는 명령행에서 파일을 인자로 받아 명령어를 통해 작업한 후 결과를 화면으로 확인하는 방식
+
 ```sh
 FROM python:3.9-slim-buster
 
@@ -286,6 +303,15 @@ ENTRYPOINT ["/entrypoint"]
 
 
 `entrypoint` 파일을 아래와 같이 작성합니다. 
+
+- [set errexit 명령어](https://secmem.tistory.com/606)
+- [set pipefail 명령어](https://secmem.tistory.com/606)
+- [set nounset 명령어](https://secmem.tistory.com/606) : 변수 확장을 할 때 존재하지 않는 변수 일 경우 에러로 간주하여 exit
+
+- shell 스크립트 : while은 true일때 동작한다면 until은 false일때 동작
+- >&2 : 모든 출력을 강제로 
+- [exec](https://wikidocs.net/111050) : 주어진 명령어를 실행하는데 새로운 프로세스를 생성하지 않고, 쉘 프로세스를 대체합니다. 예를 들어 bash 쉘에서 자바 프로그램을 실행하면 자바 프로그램의 ppid가 bash 쉘이 되고, 자바 프로그램이 bash 쉘의 하위 프로세스로 실행됩니다. exec 커맨드로 실행하면 bash쉘의 프로세스가 자바 프로그램이 됩니다. ppid가 따로 업습니다. 그리고 자바프로그램이 종료되면 프로세스가 종료됩니다. bash 쉘로 돌아오지 않습니다.
+
 ```sh
 #!/bin/bash
 
@@ -337,3 +363,174 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver 0.0.0.0:8930
 ```
+
+### Django Config
+
+백엔드 프로젝트 환경 설정 settings.py에 몇가지 필요한 환경 셋업을 아래와 같이 합니다. 
+
+- DJANGO 앱 등록
+- DB 설정
+  - compose 파일의 db 서비스의 환경변수로 등록하여 활용
+- Django에서 이미 구성한 built-in user model 활용
+
+```python
+
+import os 
+
+import os # add with the other imports
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.postgres', # new
+    'django.contrib.staticfiles',
+    'rest_framework', # new
+    'trips', # new
+]
+
+# changed
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('PGDATABASE'),
+        'USER': os.getenv('PGUSER'),
+        'PASSWORD': os.getenv('PGPASSWORD'),
+        'HOST': os.getenv('PGHOST', 'localhost'),
+        'PORT': os.getenv('PGPORT', '5432'),
+    }
+}
+
+AUTH_USER_MODEL = 'trips.User' # new
+
+```
+
+### Custom User Model
+
+`trips/models.py`을 아래와 같이 구성
+
+```python
+# server/trips/models.py
+
+from django.contrib.auth.models import AbstractUser
+
+
+class User(AbstractUser):
+    pass
+```
+
+마이그레이션 진행
+
+> $ python manage.py makemigrations
+> $ python manage.py migrate
+
+
+### Admin 
+
+- superuser 생성 
+  - `createsuperuser` management 명령어 활용 
+    - username, email, password 사용
+
+> $ python manage.py createsuperuser
+
+```python
+from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin as DefaultUserAdmin
+
+from .models import User
+
+
+@admin.register(User)
+class UserAdmin(DefaultUserAdmin):
+    pass
+
+```
+
+서버를 실제 돌려 관리자 페이지에 접속하여 관리자 추가 등록 혹은 변경 및 삭제가 되는지 확인해볼게요. 
+
+### Channels Config
+
+매우 중요합니다. 
+Django에 소켓 통신 구현을 위한 밑작업으로 설정을 셋업할게요. 
+아래와 같이 구성합니다. 
+
+```python 
+# server/taxi/settings.py
+
+REDIS_URL = os.getenv('REDIS_URL', 'redis://localhost:6379')
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': [REDIS_URL],
+        },
+    },
+}
+```
+
+
+```python
+# server/taxi/settings.py
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.postgres',
+    'django.contrib.staticfiles',
+    'channels', # new
+    'rest_framework',
+    'trips',
+]
+```
+
+위와 같이 `INSTALLED_APPS`에 `channels`를 등록하고 `python manage.py runserver` 명령어를 돌리면 아래와 같이 오류가 발생해요. 
+asgi 설정을 하라고 오류를 뱉어내는 거에요. 
+```sh
+(env) $ python manage.py runserver
+CommandError: You have not set ASGI_APPLICATION, which is needed to run the server.
+```
+
+`settings.py` 파일이 있sms rudfhdp `routing.py` 파일을 만들고 아래와 같이 소스코드를 작성 할 게요. 
+
+```python
+# server/taxi/routing.py
+
+from django.core.asgi import get_asgi_application
+
+from channels.routing import ProtocolTypeRouter
+
+application = ProtocolTypeRouter({
+    'http': get_asgi_application(),
+})
+```
+
+`settings.py` 파일 안에 아래 코드 스니펫을 작성합니다. 
+
+```python
+# server/taxi/settings.py
+
+ASGI_APPLICATION = 'taxi.routing.application'
+```
+
+`asgi.py` 모듈 수정역시 진행합니다. 
+
+주의해야 할 사항으로 os.environ.setdefault('첫 번째 인자', '두 번째 인자')
+ - 두 번째 인자를 프로젝트 디렉토리명(settings.py이 속한)과 동일하게 함
+
+```python
+import os
+import django
+
+from channels.routing import get_default_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'taxi.settings')
+django.setup()
+application = get_default_application()
+```
+그리고 다시 서버 재기동을 통하여 오류 없이 되는 것을 확인함. 
