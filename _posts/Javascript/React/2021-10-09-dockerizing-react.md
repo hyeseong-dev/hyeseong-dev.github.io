@@ -2,7 +2,7 @@
 layout: post
 title: "Dockerizing-React"
 date: 2021-10-09 14:22
-category: Javascript/React
+category: Javascript
 tags: ['Docker', 'Dockerfile', 'React']
 
 ---
