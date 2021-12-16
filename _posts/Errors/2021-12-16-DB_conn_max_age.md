@@ -7,7 +7,8 @@ tags: [error]
 
 ---
 
-# Terms Of IPCC
+# Database Update Error To Change Status Field
+
 ### 발생시간 : 2021-07-07 오전 중 여러 차례 발생
 ###  PC 스펙 : 
   1 삼성 노트북, 모델 550XDA, 11th Gen Intel(R) Core I7-1165G7, 2.80GHz
