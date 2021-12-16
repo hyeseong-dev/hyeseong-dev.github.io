@@ -3,7 +3,7 @@ layout: post
 title: "테스트 종류"
 date: 2021-12-16 22:38
 category: etc
-tags: [test]
+tags: [gunicorn, nginx]
 
 ---
 
