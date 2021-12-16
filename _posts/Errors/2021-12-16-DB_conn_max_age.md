@@ -7,7 +7,6 @@ tags: [error]
 
 ---
 
-# Database Update Error To Change Status Field
 
 ### 발생시간 : 2021-07-07 오전 중 여러 차례 발생
 ###  PC 스펙 : 

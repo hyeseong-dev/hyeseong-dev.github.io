@@ -7,8 +7,6 @@ tags: [apt-get]
 
 ---
 
-# apt-get update error
-
 <img src="https://trello.com/1/cards/60e4fb77d90e7c2b10b95652/attachments/60e4ff5a4d7cca81ec58b3a2/previews/60e4ff5b4d7cca81ec58b3ab/download/image.png" width=200 height=200>
 
 
@@ -33,3 +31,4 @@ nameserver 172.X.X.X
 - 참고자료 : 
   - https://itectec.com/ubuntu/ubuntu-sudo-apt-update-error-release-file-is-not-yet-valid/
   - https://stackoverflow.com/questions/60269422/windows10-wsl2-ubuntu-debian-apt-get-update-failed-no-network
+  - https://ksy3241blog.wordpress.com/2016/06/17/sudo-apt-get-update-%EC%97%90%EB%9F%AC/

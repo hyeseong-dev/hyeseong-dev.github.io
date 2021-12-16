@@ -7,7 +7,7 @@ tags: [error]
 
 ---
 
-# Database Update Error To Change Status Field 
+
 
 ## 방법 1
 

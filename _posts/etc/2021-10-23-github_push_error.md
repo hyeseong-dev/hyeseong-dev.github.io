@@ -7,7 +7,6 @@ tags: [github, git]
 
 ---
 
-# GITHUB PUSH ERROR
 
 ## 상황 요약 : 
  - 작성한 소스 코드를 원격 레포에 업로드 시 발생
