@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[Django] Conversion Of Datetime Format"
-date: 2020-11-26 22:22
+title: "[Django] pkill&Celery Auto-reload"
+date: 2021-12-26 22:22
 category: Python
 tags: [Python,Paypal,Django]
 
